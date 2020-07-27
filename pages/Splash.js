@@ -4,6 +4,7 @@ import { SafeAreaView, Text, StyleSheet } from 'react-native'
 import { store } from '../context/NoteContext'
 import NoteStorage from '../storage/NoteStorage'
 
+import Header from '../components/Header'
 import Button from '../components/Button'
 
 const SplashPage = (props) => {
@@ -27,7 +28,7 @@ const SplashPage = (props) => {
     return (
         <>
             <SafeAreaView style={style.root}>
-                <Text>No Packages</Text>
+                <Header/>
                 <Button style={style.button} onPress={onPressEnter}>Enter</Button>
             </SafeAreaView>
         </>
