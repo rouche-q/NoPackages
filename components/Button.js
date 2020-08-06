@@ -11,8 +11,8 @@ const template = StyleSheet.create({
     button: {
         width: "80%",
         backgroundColor: "#46b3e6",
-        padding: 5,
-        borderRadius: 2,
+        padding: 10,
+        borderRadius: 3,
         margin: 10,
         alignSelf: "center"
 
@@ -21,6 +21,7 @@ const template = StyleSheet.create({
     text : {
         textAlign: "center",
         color: "white",
+        fontSize: 20
     }
 })
 

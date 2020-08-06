@@ -14,7 +14,7 @@ const style = StyleSheet.create({
         borderColor: "#4d80e4",
         borderWidth: 2,
         padding: 5,
-        borderRadius: 2,
+        borderRadius: 3,
         alignSelf: "center",
         margin: 20,
     },

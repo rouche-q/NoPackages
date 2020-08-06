@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react'
-import { SafeAreaView } from "react-native"
+import { SafeAreaView, StyleSheet } from "react-native"
 
 import { store } from './../context/NoteContext'
 import NoteStorage from '../storage/NoteStorage'
@@ -36,12 +36,19 @@ const CreateNotePage = (props) => {
         <>
             <SafeAreaView>
                 <Header />
-                <Input placeholder="Title" onChange={onChangeTitle} />
+                <Input placeholder="Title" onChange={onChangeTitle} style={style.titleInput}/>
                 <MultilineInput placeholder="Your Note" onChange={onChangeText} />
                 <Button onPress={goToHome}>Save</Button>
             </SafeAreaView>
         </>
     )
 }
+
+const style = StyleSheet.create({
+    titleInput: {
+        fontSize: 20,
+        height: 60
+    }
+})
 
 export default CreateNotePage

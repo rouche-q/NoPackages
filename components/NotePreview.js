@@ -3,7 +3,7 @@ import { Pressable, StyleSheet, Text, Dimensions } from 'react-native'
 
 const NotePreview = (props) => {
     let title = props.title ? props.title.length > 18 ? props.title.substr(0, 15) + "..." : props.title : "No Title"
-    let text = props.text ? props.text.length > 115 ? props.text.substr(0, 112) + "..." : props.title : "Nothing to remember"
+    let text = props.text ? props.text.length > 110 ? props.text.substr(0, 107) + "..." : props.title : "Nothing to remember"
 
     return (
         <Pressable style={template.note} onPress={props.onPress} onLongPress={props.onLongPress}>
@@ -19,7 +19,7 @@ const template = StyleSheet.create({
         height: Dimensions.get('window').height / 5,
         backgroundColor: "#4d80e4",
         margin: 5,
-        borderRadius: 5,
+        borderRadius: 3,
     },
 
     title: {
@@ -32,7 +32,7 @@ const template = StyleSheet.create({
     },
 
     text: {
-        padding: 5,
+        padding: 10,
         color: 'white',
     }
 })

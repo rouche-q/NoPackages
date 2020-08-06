@@ -27,7 +27,7 @@ const template = StyleSheet.create({
         borderBottomColor: "black",
         width: "95%",
         alignSelf: "center",
-        height:"77%"
+        height:"72%",
     }
 })
 

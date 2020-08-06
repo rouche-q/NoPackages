@@ -37,11 +37,11 @@ const style = StyleSheet.create({
         borderBottomColor: "black",
         width: "95%",
         alignSelf: "center",
-        fontSize: 20
+        fontSize: 20,
     },
 
     scroll: {
-        padding: 5
+        padding: 12
     }
 })
 

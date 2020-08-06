@@ -1,4 +1,4 @@
-#Wed Jul 22 15:25:48 CEST 2020
-base.0=/home/rouche-q/Dev/noPackages/android/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+#Thu Jul 30 16:17:38 CEST 2020
+base.0=/home/rouche-q/Dev/NoPackages/android/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

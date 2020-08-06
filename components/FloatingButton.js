@@ -1,17 +1,27 @@
 import React from 'react'
-import {TouchableOpacity, StyleSheet, Image} from "react-native"
+import { TouchableOpacity, StyleSheet, Image } from "react-native"
 import Add from './../assets/add.png'
 
-const FloatingButton = ({onPress, color, style}) => (
-    <TouchableOpacity style={[template.button, style, color ? {backgroundColor: color} : {}]} onPress={onPress}>
-        <Image style={template.icon} source={Add}/>
+const chooseIcon = (icon) => {
+    switch (icon) {
+        case 'Add':return Add
+        case 'Modif':return null
+        case "Back": return null
+        default:
+            return Add
+    }
+}
+
+const FloatingButton = ({ onPress, color, style, icon }) => (
+    <TouchableOpacity style={[template.button, style, color ? { backgroundColor: color } : {}]} onPress={onPress}>
+        <Image style={template.icon} source={chooseIcon(icon)} />
     </TouchableOpacity>
 )
 
 const template = StyleSheet.create({
     button: {
-        width: 50,
-        height: 50,
+        width: 60,
+        height: 60,
         backgroundColor: "#46b3e6",
         alignItems: "center",
         justifyContent: "center",
@@ -22,13 +32,7 @@ const template = StyleSheet.create({
         zIndex: 10
     },
 
-    text : {
-        textAlign: "center",
-        color: "white",
-        fontSize: 30
-    },
-
-    icon : {
+    icon: {
         width: 30,
         height: 30,
     }
