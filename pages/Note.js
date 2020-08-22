@@ -3,6 +3,7 @@ import { SafeAreaView, Text, StyleSheet, ScrollView } from "react-native"
 
 import { store } from './../context/NoteContext'
 import NoteStorage from '../storage/NoteStorage'
+import useBackHandler from "../hooks/useBackHandler"
 
 import Header from "./../components/Header"
 import Input from "../components/Input"
@@ -11,12 +12,7 @@ import Button from "../components/Button"
 
 const NotePage = (props) => {
     const { dispatch, state } = useContext(store)
-
-    let goToHome = () => {
-        setTimeout(() => {
-            props.goTo("HomePage")
-        }, 250)
-    }
+    useBackHandler(() => { props.goTo("HomePage") })
 
     return (
         <>

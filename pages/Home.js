@@ -3,6 +3,7 @@ import { SafeAreaView, Text, StyleSheet, ImagePropTypes, ScrollView, View, Alert
 
 import { store } from './../context/NoteContext'
 import NoteStorage from '../storage/NoteStorage'
+import useBackHandler from "../hooks/useBackHandler"
 
 import Header from "./../components/Header"
 import FloatingButton from "./../components/FloatingButton"
@@ -10,6 +11,7 @@ import NotePreview from './../components/NotePreview'
 
 const HomePage = (props) => {
     const { dispatch, state } = useContext(store)
+    useBackHandler(() => { props.goTo("SplashPage")})
 
     let goToCreateNote = () => {
         setTimeout(() => {

@@ -3,6 +3,7 @@ import { SafeAreaView, StyleSheet } from "react-native"
 
 import { store } from './../context/NoteContext'
 import NoteStorage from '../storage/NoteStorage'
+import useBackHandler from "../hooks/useBackHandler"
 
 import Header from "./../components/Header"
 import Input from "../components/Input"
@@ -13,6 +14,8 @@ const CreateNotePage = (props) => {
     const { dispatch } = useContext(store)
     const [title, setTitle] = useState('')
     const [text, setText] = useState('')
+    useBackHandler(() => { props.goTo("HomePage") })
+
 
     let onChangeTitle = (value) => {
         setTitle(value)

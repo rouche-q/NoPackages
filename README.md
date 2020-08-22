@@ -16,10 +16,10 @@ And because i like to reinvent the wheel
 
 ## NEXT STEP ?
   
-  - [ ] BackHandler
-  - [ ] History in router
+  - [X] BackHandler - 07/08/2020
+  - [X] History in router - 08/08/2020
   - [ ] Animation when page change in router
   - [ ] External call to api
   - [ ] Make test with Jest (I know)
   - [ ] Make a doc
-  - [ ] Put it on Google Play
+  - [ ] Put it on Google Play Store
